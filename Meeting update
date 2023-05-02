@@ -1,16 +1,40 @@
 # studio4-chatbot-project
 
-Meeting minutes 2023/05/02
+Meeting minutes 02/05/2023
+
 Status update:
-Clyde: created repository in github 
-       invited team members to join the project
+Clyde: Created repository in github 
+       Invited team members to join the project
+       Reserched some of the git tools and watched youtube video to get a general idea 
+       shared the previous pet food store project    
+Balaram:
+
+
+
+Junqi:
+
+
+
+Pubudu:
+
+
+
+
        
        Road broker: NO
        Highlights: NA
 
 Action List:
+1 Explore github and get unstanding of the CI CD concpet           (In progress)
+2 review the initial pet food store project and fix the bugs       (Needs review)
+3 Asking Chatgpt itself to get the answer how to connect the API to make a chatbot 
+  How to integrate it as the role of coustomer service with pet food store project      (Planned)
+4 Define the scope and backlog and assigning the backlogto the team     (In progress)
       
 
 Achieved:
-        Agreed use GitKraken
-        
+        Created Github account.
+        Settle down the roles of each team member.
+        Published the define of scope.
+        Created the repository for the project in Github, Successfully invited team members to join.
+        Learned how to use github to add a file to share the progress and create repository.
