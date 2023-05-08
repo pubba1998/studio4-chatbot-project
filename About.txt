@@ -1,0 +1,13 @@
+  Here is define of scope for our chatbot-project   
+  1 Index page:It is used to visit the main page of the website, introduce the content and functions of the website, 
+                    as well as the latest activities and special offers and other information.
+                    The most important thing is to have a chatbot in this interface.
+
+  2 Product classification: used to access different types of pet food products, which can be classified according to pet type, brand, composition, etc., 
+                            so that users can quickly browse the required products.
+
+  3 Shopping cart: It is used to manage the products that the user has purchased. You can check the quantity of the products, modify the type and quantity of the products,
+                   check out the shopping cart and other functions.
+
+  4 Log in page: used to manage users' personal information, 
+                 including account settings, order inquiries, historical purchase records and other functions.
