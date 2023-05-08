@@ -1,7 +1,0 @@
-define scope
-1.Create a pet food website for online shopping 
-2.Customer service with chatbot(respond the question from customer)
-3.log in and log out page 
-4.make webpage more beautiful
-5.easy to ues ,convenience
-
