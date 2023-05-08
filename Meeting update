@@ -94,14 +94,64 @@ Understood the tools for implement PHP project
 
 
 Upcoming to do list 
-Find the resources or tutorial about how to make a chatbot through ChatGPT API
+Find the resources or tutorial about how to make a chatbot through ChatGPT API 
 Talk about what should the chatbot looks like, make the UI design based on the initial project.
 Intergration with Github, Rollback changes to the pervious commit.
 Fixing the bugs make the initial project more pretty and combinative.
 Keep exploring Githun, Understand CI CD and other functions.
 
 
+9/05/2023 Stand up:
+Balaram:
+       Find the resources or tutorial about how to make a chatbot through ChatGPT API                    -YES
+       Talk about what should the chatbot looks like, make the UI design based on the initial project.
+       Intergration with Github, Rollback changes to the pervious commit.                                -YES
+       Fixing the bugs make the initial project more pretty and combinative.
+       Keep exploring Github, Understand CI CD and other functions.                                      -YES 
+       *Visulstudio functionalities: AI extention, extention for changing color in code, auto display    -Extra
 
+ Help:
+       1. xhs error while installing extension.
+
+Clyde:
+       Find the resources or tutorial about how to make a chatbot through ChatGPT API                    -YES
+       Catch up with what Balaram demonstrated: GitHub clone, pull, push                                 -YES
+       *Demonstrate how to run the petFoodStore project: run time environment, deployment, execute       -YES
+       How to use GitHub Issue to track the project                                                      -YES
+       Talk about what should the chatbot looks like, make the UI design based on the initial project.   
+       Intergration with Github, Rollback changes to the pervious commit.                                
+       Fixing the bugs make the initial project more pretty and combinative.
+       Keep exploring Github, Understand CI CD and other functions.                                       -YES
+       
+  Help:
+       NA
+
+Pubudu:
+       Tried to fix the existing bug in the petFoodStore website code                                    -YES
+              -- Solution to the fix is ready
+              -- Expecting the fix to be done by 16/05/2023
+       Recap what have been done during the petFoodStore project                                         -YES
+       
+       Find the resources or tutorial about how to make a chatbot through ChatGPT API 
+       Talk about what should the chatbot looks like, make the UI design based on the initial project.
+       Intergration with Github, Rollback changes to the pervious commit.
+       Fixing the bugs make the initial project more pretty and combinative.
+       Keep exploring Github, Understand CI CD and other functions.                                      -YES
+       
+  Help:
+       NA
+       
+Junqi:
+       Find the resources or tutorial about how to make a chatbot through ChatGPT API 
+       Talk about what should the chatbot looks like, make the UI design based on the initial project.
+       Intergration with Github, Rollback changes to the pervious commit.                                -YES
+       Fixing the bugs make the initial project more pretty and combinative.
+       Keep exploring Github, Understand CI CD and other functions.
+       Re-write project definition and the scope                                                         -YES
+       Continue exporing GitHub Actions, have got sample action working                                  -YES
+
+  Help:
+       NA
 
 ##### !!!  Anyone please feel free to add anything about ideas
 
