@@ -12,4 +12,7 @@
   4 Log in page: used to manage users' personal information, 
                  including account settings, order inquiries, historical purchase records and other functions.
             
-  5 customer service online query: we developed the chatbot based on the chatgpt.this chatbot is speciallized in the pet food industry 24/7  
+  5 customer service online query: we developed the chatbot based on the chatgpt.this chatbot is speciallized in the pet food industry 24/7.
+  6 chatbot  :  Auto-response to frequently asked questions: chatbots can be programmed to answer frequently asked questions, such as the business hours of a company, the                      price of a product, etc. This reduces the workload for customer service representatives, allowing them to focus on more complex issues.
+     
+             
