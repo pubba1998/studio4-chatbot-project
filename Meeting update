@@ -159,13 +159,6 @@ Junqi:
 
 09/05/2023  Meeting update
 
-Actions list:
-Learn test automation by using PHP unittest 
-Create chatGPT developer account and watch the tutorial how to connect the chatGPT api
-define the chatbot, come up with an idea for ui design.
-Call chatgpt API and test it.
-Get to know the Tools to test, for example postman is one of the api testing tool.
- 
 
 Achived:
 * Setted up runtime enviroment
@@ -173,6 +166,48 @@ Laragon running and worked perfectly
 Each person downloaded the source code 
 Created instraction of how to set up our pet food store project step by step
 Setted up SQL database 
+
+
+Actions list:
+Learn test automation by using PHP unittest 
+Create chatGPT developer account and watch the tutorial how to connect the chatGPT api
+define the chatbot, come up with an idea for ui design.
+Call chatgpt API and test it.
+Get to know the Tools to test, for example postman is one of the api testing tool.
+
+
+Clyde:Created chatGPT developer account
+      resubmmited the instruction of setting the pet food store deployment guide.
+      Watch the tutorials about how to make chatbot by using chatgpt api 
+      
+      Can we use PHP to make chatbot? ---(Concern)
+     Help:
+     N/A
+     
+Junqi:Created chatGpt developer account,applying the api keys.
+      Research the PHP unittest.
+      
+      How to connect our project with chatGpt api?
+      Help:
+      N/A
+  
+ Pubudu:Create the interface for the chatbot.
+        I did some research on how to connect the api with ChatGPT.
+        
+        Help:
+             N/A
+             
+ Balaram: I have created chatgpt developer account.
+          I have done research on how use and create API key.
+          I have downloaded Laragon and setup database for petshop.
+          I also rollback to previous commit from another PC.
+          
+          Help:
+          N/A
+          
+
+ 
+
 
 
 ##### !!!  Anyone please feel free to add anything about ideas
