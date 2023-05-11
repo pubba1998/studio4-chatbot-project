@@ -159,27 +159,36 @@ Junqi:
 
 09/05/2023  Meeting update
 
+ 
 
-Achived:
-* Setted up runtime enviroment
-Laragon running and worked perfectly
+Achieved:
+* Setted up runtime environment
+Laragon running and working perfectly
 Each person downloaded the source code 
-Created instraction of how to set up our pet food store project step by step
+Created instructions on how to set up our pet food store project step by step, linked below.
+***https://github.com/ClydeLiu1/studio4-chatbot-project/blob/dbc87f87d95e06ac9e3766347b3a82610f0b89fa/pet-food-store%20instraction%20(1).docx
 Setted up SQL database 
 
 
+
+
+
 Actions list:
-Learn test automation by using PHP unittest 
-Create chatGPT developer account and watch the tutorial how to connect the chatGPT api
-define the chatbot, come up with an idea for ui design.
+Learn test automation by using PHP unit test 
+Create chatGPT developer account and watch the tutorial on how to connect the chatGPT api
+Define the chabot, come up with an idea for ui design.
 Call chatgpt API and test it.
-Get to know the Tools to test, for example postman is one of the api testing tool.
+Get to know the Tools to test, for example Postman is one of the api testing tools.
 
 
-Clyde:Created chatGPT developer account
-      resubmmited the instruction of setting the pet food store deployment guide.
-      Watch the tutorials about how to make chatbot by using chatgpt api 
-      
+
+
+
+Clyde: Created chatGPT developer account
+Resubmitted the instruction of setting the pet food store deployment guide.
+Watch the tutorials about how to make chatbot by using chatgpt api
+
+
       Can we use PHP to make chatbot? ---(Concern)
      Help:
      N/A
@@ -205,7 +214,31 @@ Junqi:Created chatGpt developer account,applying the api keys.
           Help:
           N/A
           
-
+          
+         
+         
+         
+ 11/05/2023   Meeting update 
+ 
+ Achieved:
+          ***Confirmed to call Chatgpt by using PHP.
+          We are able to get help from chatgpt to share the sample code for chatgpt.
+          Get to know the testing tool of Postman.
+          Get the API key from Chatgpt scusccefully. 
+          Settled down the UI design for chatbot with general idea.
+          Finished the demo of chatbot interface by Pubudu.
+          
+ Action List:
+          Make sample code provided by asking Chatgpt.
+          Explore the OpenAI model and prompts.
+          improve chatbot UI, learn how to train chatgpt to make specific mock dialog.
+          Each person needs to create separate branches at Github.
+          
+          
+ Clyde:  (Anything done share to here)(Please add achieved or actions list if you have other ideas)
+ Balaram:(Anything done share to here)
+ Junqi:(Anything done share to here)
+ Pubudu:(Anything done share to here)
  
 
 
