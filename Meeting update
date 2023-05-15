@@ -234,8 +234,11 @@ Junqi:Created chatGpt developer account,applying the api keys.
           improve chatbot UI, learn how to train chatgpt to make specific mock dialog.
           Each person needs to create separate branches at Github.
           
-          
- Clyde:  (Anything done share to here)(Please add achieved or actions list if you have other ideas)
+ 16/05/2023   Meeting update
+ 
+ Clyde:  I created the branch and added a test file in it.
+         I asked Chatgpt how to make chatbot using php.
+         
  Balaram: I have created separate branches at github.
           I have done research on OpenaAI model and prompts.
           I tried to create sample chatbot asking chatgpt but i was unable to fix OpenAI\Api.
