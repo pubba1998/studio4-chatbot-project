@@ -243,7 +243,7 @@ Junqi:Created chatGpt developer account,applying the api keys.
           I have done research on OpenaAI model and prompts.
           I tried to create sample chatbot asking chatgpt but i was unable to fix OpenAI\Api.
           Help:
-          I to install openai API.
+          I need to install openai API.
  Junqi:   Creaded the personal branches at github.
           Tried to connect to the API in various ways by asking chatgpt, it still doesn't work.
           Understand the use of chatgpt.
@@ -254,9 +254,20 @@ Junqi:Created chatGpt developer account,applying the api keys.
   Help: I couldn't upload my project from visula studio code( I can upload from normal browser ).
                    
  
-
-
-
+ 
+ (From 16/05/2023 studio4 4th week, we are going to upload the individual update in each team members own branch)
+ 
+  Achieved: Created branches for each team member.
+            Learned how to switch different branches in visual studio code.
+            Got the chatgpt API key from ChatGPT offical website.
+         ***Simple dialog box with ChatGPT API Done,Everyone got access. 
+            Fixed the error by asking ChatGPT itself.
+            
+  Actions list:
+            Keep exploring the ChatGPT api dialog box, improve it and combine it with our chatbot interface.
+            Discuss how to improve it and UI design.
+            Ask ChatGPT how to train the chatbot for specific topic conversation. 
+            
 ##### !!!  Anyone please feel free to add anything about ideas
 
 
