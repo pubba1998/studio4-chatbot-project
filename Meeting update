@@ -271,5 +271,23 @@ Junqi:Created chatGpt developer account,applying the api keys.
             
 ##### !!!  Anyone please feel free to add anything about ideas
 
+(From 18/05/2023 studio4 4th week, we are going to upload the individual update in each team members own branch)
+ 
+  Achieved: About security concern
+              1.We disscussed detailed information about high risk API key.
+              2.We have figured high risk of database in term of security while deploying in another PC.
+              3.We also found customer login data is not secured specially login ID password.
+            Everyone used their own branch to update.
+            Got some ideas and sample design of chatbot. 
+            Fixed the occuring error of database while deploying our project to new system .
+            
+  Actions list:
+              We need to work on creating secured login for database.
+              We also need to explore and improve customer login data to make it secured.
+              We need to work on mockup chatbot responsive according to question in the existing project.
+              Try to design and explore about using logo for chatbot.
+              We need to update our database attributes name for security.
+             
+##### !!!  Anyone please feel free to add anything about ideas
 
 
