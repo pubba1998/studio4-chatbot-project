@@ -290,4 +290,22 @@ Junqi:Created chatGpt developer account,applying the api keys.
              
 ##### !!!  Anyone please feel free to add anything about ideas
 
+23/05/2023   Updated action list and meeting 
+       Achieved: We have discussed about topic we need to focus.
+                 We learn about communication misunderstanding between team members. 
+                 we created secured login for database.
+                 We got mockup chatbot in existing project.
+                 
+       
+       Action List: Continue integration of chatbot in the project to get real response.
+                    Merge the code of chatbot to master. 
+                      1. Create pull request.
+                      2. Getting review.
+                      3. Close the request.
+                      4. Merging the pull requests.
+                     Explore Actions in github.
+                     Everyone pull request from master.
+
+
+
 
