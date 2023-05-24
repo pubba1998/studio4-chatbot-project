@@ -1,7 +1,7 @@
 <?php 
     $servername = "127.0.0.1";
     $username = "root";
-    $password = ""; //Your password here
+    $password = "1234"; //Your password here
     $dbname = "pet-store-project";
  
  $conn = new mysqli($servername, $username, $password, $dbname); 
