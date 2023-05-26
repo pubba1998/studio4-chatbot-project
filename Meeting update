@@ -306,6 +306,34 @@ Junqi:Created chatGpt developer account,applying the api keys.
                      Explore Actions in github.
                      Everyone pull request from master.
 
+27/05/2023   Updated action list and meeting 
+       Achieved: We have sucessfully demonstrated working chatbot with openai.
+                  1. In this chatbot customer can ask any question.
+                  2. And chatbot respond according to asked question. 
+                 We have submitted our working chatbot to master.
+                  1. We tried to merge our pull request but due to lack of naming consistency we couldn't upload.
+                  2. We tried another way to upload by updating and adding all the changes to the master folder files.
+                  3. We have launched new feature branch with chatbot.
+              
+       Action List: Create workflow to deploy the project to local machine.
+                     1. Action
+                     2. Job
+                     3. Runner
+                    Create branch based on released chatbot 1.1.
+                    Maintain and improve chatbot for the context of history.
+                     1. Improve to store chat history.
+                     2. Improve to stick with asked question. 
+                    Create independent chatbot page.
+                    Improve the UI for chatbot.
+                     1. Make it responsive.
+                     2. Use or design chatbot logo. 
+                    Create and complete you pull request.
+                    Clear all the file and folder of project.
+                     1. Delete unused folder inside folder.
+                     2. Rename file name.
+                     3. Delete dublicate files.
+                     4. Put files in a correct folder.
+
 
 
 
