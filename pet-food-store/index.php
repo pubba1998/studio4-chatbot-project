@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="chatbot.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Ruff</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
-
+   
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/chatbot.css">
 
 </head>
 <body>
-    
+
     <header>
     <nav>
         <a href="index.php">Home</a>
@@ -69,13 +71,7 @@
             </div>
         </div>
     </section>
-
-    <footer>
-        <br>
-        <p>Author: Pudubu Dasun<br>
-        <a href="mailto:info@petruff.com">info@petruff.com</a></p>
-    </footer>
-
+    <body>
     <div class="chatbot-container">
         <div class="chatbot-header">
             <h3>Chatbot</h3>
@@ -88,52 +84,11 @@
             <button id="send-button" class="send-button">Send</button>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Function to add a new message to the chat
-            function addMessage(sender, content) {
-                var chatContainer = $(".chatbot-body");
-                var senderClass = sender === "user" ? "user-message" : "chatbot-message";
-
-                chatContainer.append('<div class="message ' + senderClass + '">' + content + '</div>');
-
-                // Scroll to the bottom of the chat container
-                chatContainer.scrollTop(chatContainer.prop("scrollHeight"));
-            }
-
-            // Handle send button click or Enter key press
-            function handleSendMessage() {
-                var messageInput = $("#chat-input");
-                var message = messageInput.val().trim();
-
-                if (message !== "") {
-                    addMessage("user", message);
-                    messageInput.val("");
-                    getChatbotResponse(message);
-                }
-            }
-
-            // Get chatbot response from the API
-            function getChatbotResponse(message) {
-                // Make a POST request to the PHP file
-                $.post("chatbot.php", {message: message}, function(response) {
-                    addMessage("chatbot", response);
-                });
-            }
-
-            // Bind send button click event
-            $("#send-button").click(handleSendMessage);
-
-            // Bind Enter key press event
-            $("#chat-input").keypress(function(event) {
-                if (event.which === 13) {
-                    handleSendMessage();
-                }
-            });
-        });
-    </script>
-
+</body>
+    <footer>
+        <br>
+        <p>Author: Pudubu Dasun<br>
+        <a href="mailto:info@petruff.com">info@petruff.com</a></p>
+    </footer>
 </body>
 </html>
