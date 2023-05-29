@@ -1,0 +1,21 @@
+name: Deploy to Local
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      
+
+
+      - name: Deploy to Local
+        run: cp -r pet-food-store C:\laragon\www\
+          
