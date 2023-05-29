@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="chatbot.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Ruff</title>
@@ -82,6 +81,7 @@
         <div class="chat-input-container">
             <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." />
             <button id="send-button" class="send-button">Send</button>
+            <script type="text/javascript" src="js/chatbot.js"></script>
         </div>
     </div>
 </body>

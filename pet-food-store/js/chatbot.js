@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     // Function to add a new message to the chat
     function addMessage(sender, content) {
