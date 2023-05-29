@@ -1,0 +1,36 @@
+19/05/2023  Meeting update
+ 
+ Balaram: I am exploring the ChatGPT api dialog box.
+          I have created sample chatbot in project(combine with our project chatbot interface).
+          Doing research on how to train chatbot for our pet shop.
+          I learned about api key disable and security about API key. 
+          
+          Help:
+          N/A
+          
+  23/05/2023  Meeting update
+ 
+ Balaram: I helped pubudu to upload project folder to github through visual studio code.
+          I have created secured login for database.
+          I use logo for chatbot.
+          I tried to create mockup chatbot responsive according to question in the existing project.
+          
+          Help:
+          N/A
+
+26/05/2023  Meeting update
+ 
+ Balaram: I pull the request from master.
+          I merged my conflict while making pull request from master.
+          I pushed the sarcastic chatbot to my branch.
+          I explored some features of actions in github.
+
+          Help:
+          N/A
+
+30/05/2023  Meeting update
+ 
+ Balaram: I have created new branch.
+          I have done some research on how to do auto deployment of project.
+          I have uploaded a document for how to create pull request.
+          I have updated action list and achivement.
