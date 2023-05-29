@@ -311,9 +311,19 @@ Junqi:Created chatGpt developer account,applying the api keys.
                   1. In this chatbot customer can ask any question.
                   2. And chatbot respond according to asked question. 
                  We have submitted our working chatbot to master.
-                  1. We tried to merge our pull request but due to lack of naming consistency we couldn't upload.
+                 
+       The team has come out with the branching strategy to resolve the problems we encounted during the exercise.
+                 ( 1. We tried to merge our pull request but due to lack of naming consistency we couldn't upload.
                   2. We tried another way to upload by updating and adding all the changes to the master folder files.
-                  3. We have launched new feature branch with chatbot.
+                  3. We have launched new feature branch with chatbot.)
+                  We have the following hirarchy for the branching
+                     1. Main Branch
+                            This branch will be updated through pull request from released branch.  
+                            2.Released Branch
+                               This branch is created based on main branch. It will be updated through pull request from feature branch.
+                               3. Feature Branch
+                                   This branch is created based on released branch. It will be updated by individuals through git commit and push activities "only this branch supposed to be work on".
+                      
               
        Action List: Create workflow to deploy the project to local machine.
                      1. Action
@@ -333,6 +343,7 @@ Junqi:Created chatGpt developer account,applying the api keys.
                      2. Rename file name.
                      3. Delete dublicate files.
                      4. Put files in a correct folder.
+            
 
 
 
