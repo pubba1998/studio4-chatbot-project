@@ -16,7 +16,7 @@
 
     <header>
     <nav>
-        <a href="index.php">Home</a>
+        <a href="index.php">Home.</a>
         <a href="aboutus.php">About Us</a>
         <a href="member.php">Login</a>
         <a href="cart.php">Shopping cart</a>
