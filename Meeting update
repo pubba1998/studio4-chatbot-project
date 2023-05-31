@@ -348,6 +348,8 @@ Junqi:Created chatGpt developer account,applying the api keys.
 30/05/2023   Updated action list and meeting 
        Achieved: We have cleared the main branch and created release_01062023.
                  We created four feature branch based on release_01062023.
+                 We completed the pull request.
+                 We created the runner on and completed proof of concept for auto deployment.
 
        Action List: Implement the context for chatbot history.
                     Create independent chatbot page.
