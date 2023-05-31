@@ -43,4 +43,14 @@ $(document).ready(function () {
             handleSendMessage();
         }
     });
+
+    // Pop-out functionality
+    var chatbotContainer = $(".chatbot-container");
+    var popOutButton = $('<button class="pop-out-button">Chat</button>');
+
+    popOutButton.click(function () {
+        chatbotContainer.toggleClass("pop-out");
+    });
+
+    chatbotContainer.prepend(popOutButton);
 });
