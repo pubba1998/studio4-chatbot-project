@@ -1,4 +1,32 @@
-Self stauts update  31/5/2023
+18/05/2023  Meeting update 
+Improved the interface of chatGPT api dialog box by using HTML,CSS.
+Run the API dialog and connected to the local machine.
+Added background image for Dialog box.
+Keep learning the Chatbot and combine it with the petfoodstore project
+
+21/05/2023  Self Status update 
+Made chatbot interface(customer service) in pet food store index page by using php html css.
+Demonstrate my chatbot interface code and design on Today's Online Teams meeting.
+ChatGPT API done, now I'm trying to add and combine it with our chatbot, make the interaction with chatGPT.
+Reset Database password, to make the database secure.
+Working on exploring other ways to improve the safety of our project.
+New version of set up pet food project instruction Done.
+Commit all the updates from visual studio code.
+
+24/05/2023 Self status update 
+* ChatGPT API working, Achieved chatbot page is able to communicate and interaction with ChatGPT.
+ 
+explore github actions.
+
+
+26/05/2023 Self status update 
+Tidy up the branch. delete and replace the unnecessary files.
+Downloaded the git history tracking on visual studio code.
+Independent chatbot file done, everyone can get access for only chatbot code.
+keep improving the ui part of chatbot interface.
+
+
+31/5/2023 Self stauts update  
 Maintain chatbot context with chatgpt done. 
 New updated independent chatbot interface with fixed size.
 
