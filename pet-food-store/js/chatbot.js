@@ -1,5 +1,6 @@
-
 $(document).ready(function () {
+    var messages = []; // Array to store the conversation history
+
     // Function to add a new message to the chat
     function addMessage(sender, content) {
         var chatContainer = $(".chatbot-body");
@@ -18,16 +19,18 @@ $(document).ready(function () {
 
         if (message !== "") {
             addMessage("user", message);
+            messages.push({ role: "user", content: message }); // Add user message to the conversation history
             messageInput.val("");
-            getChatbotResponse(message);
+            getChatbotResponse();
         }
     }
 
     // Get chatbot response from the server
-    function getChatbotResponse(message) {
+    function getChatbotResponse() {
         // Make a POST request to the server
-        $.post("chatbot.php", { message: message }, function (response) {
+        $.post("chatbot.php", { messages: JSON.stringify(messages) }, function (response) {
             addMessage("chatbot", response);
+            messages.push({ role: "assistant", content: response }); // Add chatbot response to the conversation history
         });
     }
 
