@@ -1,0 +1,17 @@
+   1.Explore another way to try to create a chatgpt like web page.Follow the author's step,but can not work.
+     website(https://laf.dev/app/o73o6n/function)
+   2.upload the test.php file from visual studio,trying to design the UI for chatbot. 
+   3.upload the test folder including Simple conversation with chabot and saveing message.
+22/05/2023
+   1. updated new progress about combine the chatbot with our project.
+   2. explore how to add the chatgpt api into project.
+   3. research about how to Use a Logo as project's Chatbot avatar.
+24/05/2023
+   1. Created the public repository named "demo" in private account.
+   2. Understand most of simple code in github actions example.
+   3. Learnt practical application actions through Youtube.
+   4. Continue to explore on actions.
+29/05/2023
+   1. Actions included the events,jobs,actions,runners.
+   2. Search for posts related to actions(How to automate deployment Using gitHub actions)
+   3. Created the workflow on github for test.
