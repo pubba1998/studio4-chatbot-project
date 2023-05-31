@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     // Function to add a new message to the chat
     function addMessage(sender, content) {
@@ -40,4 +39,14 @@ $(document).ready(function () {
             handleSendMessage();
         }
     });
+
+    // Pop-out functionality
+    var chatbotContainer = $(".chatbot-container");
+    var popOutButton = $('<button class="pop-out-button">Chat</button>');
+
+    popOutButton.click(function () {
+        chatbotContainer.toggleClass("pop-out");
+    });
+
+    chatbotContainer.prepend(popOutButton);
 });
