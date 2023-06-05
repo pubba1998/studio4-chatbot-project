@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    var messages = []; // Array to store the conversation history
-
     // Function to add a new message to the chat
     function addMessage(sender, content) {
         var chatContainer = $(".chatbot-body");
@@ -19,18 +17,16 @@ $(document).ready(function () {
 
         if (message !== "") {
             addMessage("user", message);
-            messages.push({ role: "user", content: message }); // Add user message to the conversation history
             messageInput.val("");
-            getChatbotResponse();
+            getChatbotResponse(message);
         }
     }
 
     // Get chatbot response from the server
-    function getChatbotResponse() {
+    function getChatbotResponse(message) {
         // Make a POST request to the server
-        $.post("chatbot.php", { messages: JSON.stringify(messages) }, function (response) {
+        $.post("chatbot.php", { message: message }, function (response) {
             addMessage("chatbot", response);
-            messages.push({ role: "assistant", content: response }); // Add chatbot response to the conversation history
         });
     }
 
@@ -44,9 +40,17 @@ $(document).ready(function () {
         }
     });
 
+    // Make the chatbot resizable
+    $(".chatbot-container").resizable({
+        handles: "n, e, s, w, ne, se, sw, nw"
+    });
+
+    // Make the chatbot draggable
+    $(".chatbot-container").draggable();
+
     // Pop-out functionality
     var chatbotContainer = $(".chatbot-container");
-    var popOutButton = $('<button class="pop-out-button">Chat</button>');
+    var popOutButton = $('<div class="pop-out-button"><i class="fas fa-comment"></i></div>');
 
     popOutButton.click(function () {
         chatbotContainer.toggleClass("pop-out");
