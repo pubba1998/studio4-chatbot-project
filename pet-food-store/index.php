@@ -79,8 +79,8 @@
 </footer>
 
 <div class="chatbot-container">
-    
-        <h3>Chat with us</h3>
+    <div class="chatbot-header">
+        
     </div>
     <div class="chatbot-body">
         <!-- Chat messages will be displayed here -->
