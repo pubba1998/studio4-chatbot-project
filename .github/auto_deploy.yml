@@ -14,7 +14,11 @@ jobs:
         uses: actions/checkout@v2
 
       
-
-
       - name: Deploy to Local
         run: cp -r pet-food-store C:\laragon\www\
+        
+      - name: check
+        run: IF EXIST "C:\laragon\www\pet-food-store" (
+              RD /S /Q "C:\laragon\www\pet-food-store"
+          )
+
