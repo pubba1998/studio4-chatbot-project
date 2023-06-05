@@ -45,3 +45,12 @@
 
           Help:
           N/A
+          
+ 06/06/2023  Meeting update
+ 
+ Balaram: Created new feature branch based on new release branch.
+          Have done some research and tried workflow one step to check sensitive information to notify(like api key).
+          Followed workflow document to automatic deployment of project in my local machine.
+
+          Help:
+          N/A
