@@ -15,12 +15,8 @@ jobs:
 
       - name: Check if folder exists
         run: |
-          if [ -d "C:\laragon\www\pet-food-store" ]; then
-            echo "Folder exists"
-            rm -rf "C:\laragon\www\pet-food-store"
-          else
-            echo "Folder does not exist"
-          fi
+          if (Test-Path -Path "C:\laragon\www\pet-food-store" -PathType Container) {  Remove-Item -Path "C:\laragon\www\pet-food-store"   -Recurse -Force}
+
           
       - name: Deploy to Local 
         run: cp -r pet-food-store C:\laragon\www\
