@@ -18,8 +18,10 @@
 31/05/2023
    1.Completed the document for workflow actions in github.
    2.Push the Meeting update text file and document for workflow from Vs.
+
 06/06/2023
    1. Updated the document for workflow.docx file.
    2. Connected the laragon database with PowerShell and downloaded the MYSQL.
    3. updated the .yml file to continute the project to aotumatically deploy.
+   
 

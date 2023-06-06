@@ -358,3 +358,18 @@ Junqi:Created chatGpt developer account,applying the api keys.
                     Improve the UI for chatbot.
                      1. Make it responsive.
                      2. Use or design chatbot logo.
+
+01/06/2023   Updated action list and meeting 
+       Achieved: Uploaded document for workflow action list.
+                 New updated independent chatbot interface.
+                 Created popup icon for chatgpt.
+                 We created pull request of all four feature branch to release branch sucessfully.
+                 We fixed the conflict while creating pull request.
+       
+       Action List: Improve chatbot UI for both pet food store and independent page.
+                    Create new release branch based on master branch.
+                    Create new feature branch based on new release branch.
+                    Follow workflow document to automatic deployment of project in your local machine.
+                    Chatbot should greet user based on login user name and save the chat history in database.
+                    Create workflow action to deploy database automatic.
+                    Create workflow one step to check sensitive information to notify(like api key).
