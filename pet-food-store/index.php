@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Ruff</title>
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/chatbot.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-6uRpkzL3jSP4zwtsu3V0EmBDTGXhqW5PT5SzVcEhPvdnwwMF8GWW2yC9iOhpC1h2HsRrXnZVyt/fqSyUYbqR4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -78,7 +80,7 @@
 
 <div class="chatbot-container">
     <div class="chatbot-header">
-        <h3>Chatbot</h3>
+        
     </div>
     <div class="chatbot-body">
         <!-- Chat messages will be displayed here -->
@@ -86,9 +88,6 @@
     <div class="chat-input-container">
         <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." />
         <button id="send-button" class="send-button">Send</button>
-      
-</div>
-
     </div>
 </div>
 
