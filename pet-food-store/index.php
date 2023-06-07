@@ -82,7 +82,7 @@
 
 <div class="chatbot-container">
     <div class="chatbot-header">
-        <h4>Chat with us</h4>
+        <h4>Chat with us.</h4>
     <div class="chatbot-body">
         <!-- Chat messages will be displayed here -->
     </div>
