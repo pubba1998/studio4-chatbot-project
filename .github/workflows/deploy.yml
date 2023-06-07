@@ -28,6 +28,7 @@ jobs:
 
       - name: Deploy SQL files
         run: |
-          for file in sql/*.sql; do
-            mysql -h localhost -P 3306 -u root < $file
+          for file in C:\laragon\www\pet-food-store\11.sql/*.sql; do
+
+            mysql -h localhost -P 3306 -u root  < "$file"
           done
