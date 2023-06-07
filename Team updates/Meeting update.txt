@@ -373,3 +373,19 @@ Junqi:Created chatGpt developer account,applying the api keys.
                     Chatbot should greet user based on login user name and save the chat history in database.
                     Create workflow action to deploy database automatic.
                     Create workflow one step to check sensitive information to notify(like api key).
+
+06/06/2023   Updated action list and meeting 
+       Achieved: Uploaded the updated document for workflow action list.
+                 New updated chatbot interface with responsive, dragable and can adjust form size.
+                 We created pull request of all four feature branch to release branch sucessfully.
+                 We fixed the conflict while creating pull request to master branch.
+                 Connected the laragon database with PowerShell and downloaded the MYSQL.
+                 Updated the .yml file to continute the project to aotumatically deploy.
+       
+       Action List: Improve chatbot UI for both pet food store and independent page.
+                    Create new release branch based on master branch(release_08062023).
+                    Everyone need to create new feature branch based on new release branch(release_08062023).
+                    Follow the updated steps of workflow document to automatic deployment of project in your local machine.
+                    When customer login to webpage chatbot should greet user based on login user name and save the chat history in database.
+                    Create the detailed steps of workflow action to deploy database automatic.
+                    Use secret key in github or create workflow one step to check sensitive information to notify(like api key).
