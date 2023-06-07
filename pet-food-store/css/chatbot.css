@@ -80,16 +80,18 @@
     position: absolute;
     top: 5px;
     right: 5px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: #0084ff;
+    background-color: #0f1010;
     color: #fff;
     text-align: center;
-    line-height: 30px;
+    line-height: 40px;
     cursor: pointer;
 }
 
 .pop-out-button i {
-    font-size: 16px;
+    font-size: 20px;
 }
+
+
