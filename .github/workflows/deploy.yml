@@ -20,3 +20,15 @@ jobs:
           
       - name: Deploy to Local 
         run: cp -r pet-food-store C:\laragon\www\
+        
+      - name: Set up MySQL
+        uses: panyam/setup-mysql@v1
+        with:
+          mysql-version: 8.x
+
+      - name: Deploy SQL files
+        run: |
+          for file in C:\laragon\www\pet-food-store\11.sql/*.sql; do
+
+            mysql -h localhost -P 3306 -u root  < "$file"
+          done
