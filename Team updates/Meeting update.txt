@@ -373,4 +373,3 @@ Junqi:Created chatGpt developer account,applying the api keys.
                     Chatbot should greet user based on login user name and save the chat history in database.
                     Create workflow action to deploy database automatic.
                     Create workflow one step to check sensitive information to notify(like api key).
-                    Create new chatgpt account if expired to get access of API key.
