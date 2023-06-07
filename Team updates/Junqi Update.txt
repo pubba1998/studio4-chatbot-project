@@ -23,5 +23,7 @@
    1. Updated the document for workflow.docx file.
    2. Connected the laragon database with PowerShell and downloaded the MYSQL.
    3. updated the .yml file to continute the project to aotumatically deploy.
-   
+07/06/2023
+   1. Created the workflow feature branch based on release branch.
+   2. Updated the .yml file trying to automatically deploy project.
 
