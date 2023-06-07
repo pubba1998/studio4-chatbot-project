@@ -54,3 +54,15 @@
 
           Help:
           N/A
+
+08/06/2023  Meeting update
+ 
+ Balaram: Created pull request to master branch from release branch and merged the conflict.
+          Created new feature branch based on new release branch(release_08062023).
+          Have done some research and tried to use secret key as secured way for api key.
+          I have sucessfully followed workflow document to automatic deployment of project in my local machine.
+          Created new chatbot account.
+
+          Help:
+          I need help for how to run secret key from github to project code. 
+          N/A
