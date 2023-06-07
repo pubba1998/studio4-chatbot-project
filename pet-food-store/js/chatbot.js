@@ -49,20 +49,25 @@ $(document).ready(function () {
     $(".chatbot-container").draggable();
 
     // Pop-out functionality
-var chatbotContainer = $(".chatbot-container");
-var popOutButton = $('<div class="pop-out-button"><i style="font-size: 24px" class="fas">&#xf086;</i></div>');
+    var chatbotContainer = $(".chatbot-container");
+    var popOutButton = $('<div class="pop-out-button"><i style="font-size: 24px" class="fas">&#xf086;</i></div>');
 
-popOutButton.click(function () {
-    chatbotContainer.toggleClass("pop-out");
-});
+    popOutButton.click(function () {
+        chatbotContainer.toggleClass("pop-out");
 
-chatbotContainer.prepend(popOutButton);
+        // Hide the form when the chatbot is popped out
+        if (chatbotContainer.hasClass("pop-out")) {
+            $(".chat-input-container").hide();
+        } else {
+            $(".chat-input-container").show();
+        }
+    });
 
+    chatbotContainer.prepend(popOutButton);
 
-    
     // Resize functionality
     var resizer = $('<div class="resizer"></div>');
-    chatbotContainer.append(resizer);
+    chatbotContainer.prepend(resizer);
 
     resizer.on("mousedown", function (e) {
         e.preventDefault();
@@ -73,7 +78,7 @@ chatbotContainer.prepend(popOutButton);
     function resize(e) {
         chatbotContainer.css({
             width: e.pageX - chatbotContainer.offset().left,
-            height: e.pageY - chatbotContainer.offset().top
+            height: chatbotContainer.offset().top + chatbotContainer.outerHeight() - e.pageY
         });
     }
 
