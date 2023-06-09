@@ -1,18 +1,27 @@
+name: Deploy to Local
+
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   deploy:
-    runs-on: self-hosted
+    runs-on: windows-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          node-version: 16
 
-      
-
+      - name: Check if folder exists
+        run: |
+          IF EXIST C:\laragon\www\pet-food-store rmdir /s /q C:\laragon\www\pet-food-store
 
       - name: Deploy to Local
-        run: cp -r pet-food-store C:\laragon\www\
+        run: xcopy /E /I pet-food-store C:\laragon\www\
+
+      - name: Deploy SQL files
+        run: |
+          type C:\laragon\www\pet-food-store\11.sql | mysql -h localhost -u root
