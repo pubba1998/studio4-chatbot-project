@@ -3,11 +3,11 @@ name: Deploy to Local
 on:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
   deploy:
-    runs-on: windows-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout Repository
@@ -17,13 +17,14 @@ jobs:
 
       - name: Check if folder exists
         run: |
-          IF EXIST "C:\laragon\www\pet-food-store" (
-            rmdir /s /q "C:\laragon\www\pet-food-store"
-          )
-
-      - name: Deploy to Local
-        run: xcopy /E /I pet-food-store C:\laragon\www\
-
+          if (Test-Path -Path "C:\laragon\www\pet-food-store" -PathType Container) { 
+            Remove-Item -Path "C:\laragon\www\pet-food-store" -Recurse -Force
+          }
+          
+      - name: Deploy to Local 
+        run: |
+          xcopy /E /I pet-food-store C:\laragon\www\
+        
       - name: Deploy SQL files
         run: |
-          type C:\laragon\www\pet-food-store\11.sql | mysql -h localhost -u root
+          Get-Content C:\laragon\www\pet-food-store\11.sql | mysql -h localhost -u root
