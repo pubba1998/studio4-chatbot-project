@@ -27,4 +27,13 @@ jobs:
       - name: Deploy SQL files
         run: |
           Get-Content C:\laragon\www\pet-food-store\11.sql | mysql -h localhost -u root
+          
+  build:
+    runs-on: self-hosted
 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: secret_key
+        run: setx API_KEY ${{ secrets.API_KEY }}
