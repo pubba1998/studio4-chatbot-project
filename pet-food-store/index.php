@@ -3,8 +3,6 @@
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://kit.fontawesome.com/07a0fdf3a8.js" crossorigin="anonymous"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Ruff</title>
@@ -14,8 +12,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/chatbot.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-6uRpkzL3jSP4zwtsu3V0EmBDTGXhqW5PT5SzVcEhPvdnwwMF8GWW2yC9iOhpC1h2HsRrXnZVyt/fqSyUYbqR4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+
 <body>
 
 <header>
@@ -74,25 +71,31 @@
     </div>
 </section>
 
+<button id="toggle-chat">Chat</button>
+
+ <div class="chat-window" id="chat-window">
+        <div class="chat-header">chat window</div>
+        <div class="chat-body">
+            <div class="message other">
+                
+            </div>
+            <div class="message">
+                
+            </div>
+           <!-- Additional chat information can be added as needed -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" placeholder="Enter information....">
+            <button id="send-btn">send</button>
+        </div>
+    </div>
+
+<script src="js/chatbot.js"></script>
 <footer>
     <br>
     <p>Author: Pudubu Dasun<br>
         <a href="mailto:info@petruff.com">info@petruff.com</a></p>
 </footer>
-
-<div class="chatbot-container">
-    <div class="chatbot-header">
-        <h4>Chat with us.</h4>
-    <div class="chatbot-body">
-        <!-- Chat messages will be displayed here -->
-    </div>
-    <div class="chat-input-container">
-        <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." />
-        <button id="send-button" class="send-button">Send</button>
-    </div>
-</div>
-
-<script src="js/chatbot.js"></script>
 
 </body>
 </html>
