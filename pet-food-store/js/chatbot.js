@@ -1,60 +1,132 @@
-$(document).ready(function () {
-    // Function to add a new message to the chat
-    function addMessage(sender, content) {
-        var chatContainer = $(".chatbot-body");
-        var senderClass = sender === "user" ? "user-message" : "chatbot-message";
+ // Implement draggable and resizable chat window
 
-        chatContainer.append('<div class="message ' + senderClass + '">' + content + '</div>');
+ var chatWindow = document.querySelector('.chat-window');
+ var isDragging = false, isResizing = false;
+ var lastX, lastY, startX, startY;
 
-        // Scroll to the bottom of the chat container
-        chatContainer.scrollTop(chatContainer.prop("scrollHeight"));
-    }
+ chatWindow.addEventListener('mousedown', function (e) {
+     if (e.target.classList.contains('chat-header')) {
+         isDragging = true;
+         lastX = e.clientX;
+         lastY = e.clientY;
+     } else if (e.target.classList.contains('chat-footer')) {
+         isResizing = true;
+         startX = e.clientX;
+         startY = e.clientY;
+     }
+ });
+// Mouse move event
+ chatWindow.addEventListener('mousemove', function (e) {
+     if (isDragging) {
+         var deltaX = e.clientX - lastX;
+         var deltaY = e.clientY - lastY;
+         var currentX = parseInt(getComputedStyle(chatWindow).left);
+         var currentY = parseInt(getComputedStyle(chatWindow).top);
+         chatWindow.style.left = (currentX + deltaX) + 'px';
+         chatWindow.style.top = (currentY + deltaY) + 'px';
+         lastX = e.clientX;
+         lastY = e.clientY;
+     } else if (isResizing) {
+         var deltaX = e.clientX - startX;
+         var deltaY = e.clientY - startY;
+         var newWidth = chatWindow.offsetWidth + deltaX;
+         var newHeight = chatWindow.offsetHeight + deltaY;
+         if (newWidth > parseInt(getComputedStyle(chatWindow).minWidth) && newWidth < parseInt(getComputedStyle(chatWindow).maxWidth)) {
+             chatWindow.style.width = newWidth + 'px';
+         }
+         if (newHeight > parseInt(getComputedStyle(chatWindow).minHeight) && newHeight < parseInt(getComputedStyle(chatWindow).maxHeight)) {
+             chatWindow.style.height = newHeight + 'px';
+         }
+         startX = e.clientX;
+         startY = e.clientY;
+     }
+ });
+// Mouse release event
+ chatWindow.addEventListener('mouseup', function (e) {
+     isDragging = false;
+     isResizing = false;
+ });
 
-    // Handle send button click or Enter key press
-    function handleSendMessage() {
-        var messageInput = $("#chat-input");
-        var message = messageInput.val().trim();
+ // Send button click event
+ var sendBtn = document.getElementById('send-btn');
+ var chatBody = document.querySelector('.chat-body');
 
-        if (message !== "") {
-            addMessage("user", message);
-            messageInput.val("");
-            getChatbotResponse(message);
-        }
-    }
+ sendBtn.addEventListener('click', sendMessage);
 
-    // Get chatbot response from the server
-    function getChatbotResponse(message) {
-        // Make a POST request to the server
-        $.post("chatbot.php", { message: message }, function (response) {
-            addMessage("chatbot", response);
-        });
-    }
+ // Listen for keyboard keydown event in the input field
+ var inputBox = document.querySelector('input[type="text"]');
+ inputBox.addEventListener('keydown', function (event) {
+     if (event.keyCode === 13) { // If the pressed key is the Enter key
+         event.preventDefault(); // Prevent default behavior
+         sendMessage(); // Send message
+     }
+ });
 
-    // Bind send button click event
-    $("#send-button").click(handleSendMessage);
+// Send message
+ function sendMessage() {
+     var inputText = inputBox.value.trim();
+     if (inputText !== '') {
+         var messageContainer = document.createElement('div');
+         messageContainer.classList.add('message');
+         messageContainer.innerHTML = `
+         <div class="text">${inputText}</div>
+     `;
+         chatBody.appendChild(messageContainer);
+         inputBox.value = '';
+     }
+     // Call chatbot
+     getChatbotResponse(inputText);
+ }
 
-    // Bind Enter key press event
-    $("#chat-input").keypress(function (event) {
-        if (event.which === 13) {
-            handleSendMessage();
-        }
-    });
+   // Chatbot sends a message 
+     function botSendMessage(message) {
+     if (message !== '') {
+         var messageContainer = document.createElement('div');
+         messageContainer.classList.add('message'+'other');
+         messageContainer.innerHTML = `
+         <div class="text">${message}</div>
+     `;
+         chatBody.appendChild(messageContainer);
+     }
+ }
+     // Get chatbot response from the API
+     function getChatbotResponse(message) {
+         var apiKey = ''; // Replace with your actual OpenAI API key
+         var endpoint = 'https://api.openai.com/v1/chat/completions';
+         var model = 'gpt-3.5-turbo';
 
-    // Make the chatbot resizable
-    $(".chatbot-container").resizable({
-        handles: "n, e, s, w, ne, se, sw, nw"
-    });
+         // Prepare the data payload
+         var data = {
+             'messages': [
+                 { 'role': 'system', 'content': 'You are a helpful assistant.' },
+                 { 'role': 'user', 'content': message }
+             ],
+             'model': model
+         };
 
-    // Make the chatbot draggable
-    $(".chatbot-container").draggable();
+         // Prepare the headers
+         var headers = {
+             'Content-Type': 'application/json',
+             'Authorization': 'Bearer ' + apiKey
+         };
 
-    // Pop-out functionality
-    var chatbotContainer = $(".chatbot-container");
-    var popOutButton = $('<div class="pop-out-button"><i class="fas fa-comment"></i></div>');
-
-    popOutButton.click(function () {
-        chatbotContainer.toggleClass("pop-out");
-    });
-
-    chatbotContainer.prepend(popOutButton);
-});
+         // Make a POST request to the API
+         $.post({
+             url: endpoint,
+             headers: headers,
+             data: JSON.stringify(data),
+             success: function (response) {
+                 var chatbotResponse = response.choices[0].message.content;
+                 botSendMessage(chatbotResponse);
+             }
+         });
+     }
+   // Show and hide the chat window
+     const toggleButton = document.querySelector('#toggle-chat');
+     const chatWindows = document.querySelector('#chat-window');
+     toggleButton.addEventListener('click', () => {
+             if (chatWindows.style.display === 'none') {
+                     chatWindows.style.display = 'block';
+                     } else {
+                         chatWindows.style.display = 'none';
+                 }});
