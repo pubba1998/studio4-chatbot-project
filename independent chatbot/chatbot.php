@@ -188,7 +188,7 @@
 
             
             function getChatbotResponse(message) {
-                var apiKey = ''; 
+                $apiKey = $_SERVER['API_KEY']?? getenv('API_KEY'); 
                 var endpoint = 'https://api.openai.com/v1/chat/completions';
                 var model = 'gpt-3.5-turbo';
 
