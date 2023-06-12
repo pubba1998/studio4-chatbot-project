@@ -188,7 +188,7 @@
 
             
             function getChatbotResponse(message) {
-                var apiKey = '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'; 
+                var apiKey = ''; 
                 var endpoint = 'https://api.openai.com/v1/chat/completions';
                 var model = 'gpt-3.5-turbo';
 
