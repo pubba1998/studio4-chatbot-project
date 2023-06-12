@@ -15,6 +15,7 @@
             position: fixed;
             top: 50%;
             left: 50%;
+            margin-top:20px;
             transform: translate(-50%, -50%);
             width: 800px;
             max-width: 90%;
@@ -27,8 +28,9 @@
         
         .chatbot-header {
             padding: 20px;
-            background-color: #f5f5f5;
+            background-image: linear-gradient(to right, rgb(219, 96, 219), rgb(29, 29, 228));
             border-bottom: 1px solid #ccc;
+            color:while;
             text-align: center;
         }
         
@@ -39,30 +41,36 @@
             color: #333;
         }
         
-        .chatbot-body {
-            max-height: 500px;
+        .chat-body{
+            margin-top:50px;
             overflow-y: auto;
             padding: 20px;
         }
         
+       
         .message {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
             margin-bottom: 10px;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 16px;
-            line-height: 1.5;
         }
-        
-        .user-message {
-            background-color: #eaf2fd;
-            color: #333;
-            text-align: right;
+
+        .message .text {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 70%;
+            margin-left:10px;
         }
-        
-        .chatbot-message {
-            background-color: #f5f5f5;
-            color: #333;
-            text-align: left;
+
+        .message.other {
+            align-items: flex-start;
+        }
+
+        .message.other .text {
+            background-color: #8f45de;
+            color: while;
         }
         
         .chat-input-container {
@@ -78,9 +86,35 @@
             padding: 8px 12px;
             font-size: 16px;
             border: none;
+            margin-top: 20px;;
             border-radius: 4px;
             outline: none;
         }
+       
+        button {
+            font-size: 18px;
+            display: inline-block;
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            will-change: box-shadow,transform;
+            background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100% );
+            box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+            padding: 0 2em;
+            border-radius: 0.3em;
+            color: #fff;
+            height: 2.6em;
+            text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+            transition: box-shadow 0.15s ease, transform 0.15s ease;
+             }
+            button:hover {
+            box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+            transform: translateY(-0.1em);
+            }
+            button:active {
+            box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+            transform: translateY(0em);
+            }
         
         .send-button {
             padding: 8px 16px;
@@ -103,90 +137,98 @@
         <div class="chatbot-header">
             <h3>Chatbot</h3>
         </div>
-        <div class="chatbot-body">
-            <!-- Chat messages will be displayed here -->
+        <div class="chat-body">
+        
         </div>
+
         <div class="chat-input-container">
             <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." />
             <button id="send-button" class="send-button">Send</button>
         </div>
     </div>
 
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
-            // Function to add a new message to the chat
-            function addMessage(sender, content) {
-                var chatContainer = $(".chatbot-body");
-                var senderClass = sender === "user" ? "user-message" : "chatbot-message";
+            var inputBox = document.querySelector('#chat-input');
+            var chatBody = document.querySelector('.chat-body');
+            var conversationHistory = [];
 
-                chatContainer.append('<div class="message ' + senderClass + '">' + content + '</div>');
-
-                // Scroll to the bottom of the chat container
-                chatContainer.scrollTop(chatContainer.prop("scrollHeight"));
-            }
-
-            // Handle send button click or Enter key press
-            function handleSendMessage() {
+          
+            function sendMessage() {
                 var messageInput = $("#chat-input");
                 var message = messageInput.val().trim();
+                if (message !== '') {
+                    var messageContainer = document.createElement('div');
+                    messageContainer.classList.add('message');
+                    messageContainer.innerHTML = `
+                        <div class="text">${message}</div>
+                    `;
+                    chatBody.appendChild(messageContainer);
+                    inputBox.value = '';
+                }
 
-                if (message !== "") {
-                    addMessage("user", message);
-                    messageInput.val("");
-                    getChatbotResponse(message);
+                conversationHistory.push({ 'role': 'user', 'content': message });
+
+             
+                getChatbotResponse(message);
+            }
+
+            function botSendMessage(message) {
+                if (message !== '') {
+                    var messageContainer = document.createElement('div');
+                    messageContainer.classList.add('message', 'other');
+                    messageContainer.innerHTML = `
+                        <div class="text">${message}</div>
+                    `;
+                    chatBody.appendChild(messageContainer);
+                    chatBody.scrollTop = chatBody.scrollHeight; 
                 }
             }
 
-            // Get chatbot response from the API
+            
             function getChatbotResponse(message) {
-                var apiKey = ''; // Replace with your actual OpenAI API key
+                $apiKey = $_SERVER['API_KEY']?? getenv('API_KEY'); 
                 var endpoint = 'https://api.openai.com/v1/chat/completions';
                 var model = 'gpt-3.5-turbo';
 
-                // Prepare the data payload
+            
                 var data = {
-                    'messages': [
-                        { 'role': 'system', 'content': 'You are a helpful assistant.' },
-                        { 'role': 'user', 'content': message }
-                    ],
+                    'messages': conversationHistory,
                     'model': model
                 };
 
-                // Prepare the headers
+        
                 var headers = {
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer ' + apiKey
                 };
 
-                // Make a POST request to the API
+         
                 $.post({
                     url: endpoint,
                     headers: headers,
                     data: JSON.stringify(data),
                     success: function (response) {
                         var chatbotResponse = response.choices[0].message.content;
-                        addMessage("chatbot", chatbotResponse);
+
+                        conversationHistory.push({ 'role': 'assistant', 'content': chatbotResponse });
+
+                        botSendMessage(chatbotResponse);
                     }
                 });
             }
 
-            // Bind send button click event
-            $("#send-button").click(handleSendMessage);
+            
+            $("#send-button").click(sendMessage);
 
-            // Bind Enter key press event
+
             $("#chat-input").keypress(function (event) {
                 if (event.which === 13) {
-                    handleSendMessage();
+                    sendMessage();
                 }
             });
         });
     </script>
 </body>
-
 </html>
