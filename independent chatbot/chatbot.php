@@ -15,7 +15,7 @@
             position: fixed;
             top: 50%;
             left: 50%;
-            margin-top:20px;
+            margin-top: 20px;
             transform: translate(-50%, -50%);
             width: 800px;
             max-width: 90%;
@@ -30,7 +30,7 @@
             padding: 20px;
             background-image: linear-gradient(to right, rgb(219, 96, 219), rgb(29, 29, 228));
             border-bottom: 1px solid #ccc;
-            color:while;
+            color: while;
             text-align: center;
         }
         
@@ -41,13 +41,13 @@
             color: #333;
         }
         
-        .chat-body{
-            margin-top:50px;
-            overflow-y: auto;
+        .chat-body {
+            margin-top: 50px;
             padding: 20px;
+            overflow-y: scroll; /* Add scroll behavior */
+            height: 550px; /* Set a fixed height */
         }
         
-       
         .message {
             display: flex;
             flex-direction: column;
@@ -61,7 +61,7 @@
             padding: 10px;
             border-radius: 5px;
             max-width: 70%;
-            margin-left:10px;
+            margin-left: 10px;
         }
 
         .message.other {
@@ -106,15 +106,17 @@
             height: 2.6em;
             text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
             transition: box-shadow 0.15s ease, transform 0.15s ease;
-             }
-            button:hover {
+        }
+        
+        button:hover {
             box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
             transform: translateY(-0.1em);
-            }
-            button:active {
+        }
+        
+        button:active {
             box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
             transform: translateY(0em);
-            }
+        }
         
         .send-button {
             padding: 8px 16px;
