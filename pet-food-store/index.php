@@ -78,19 +78,7 @@
         <a href="mailto:info@petruff.com">info@petruff.com</a></p>
 </footer>
 
-<!-- <div class="chatbot-container">
-    <div class="chatbot-header">
-        
-    </div>
-    <div class="chatbot-body">
-     
-    </div>
-    <div class="chat-input-container">
-        <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." />
-        <button id="send-button" class="send-button">Send</button>
-    </div>
-</div>
- -->
+
 
  <style type="text/css">
         body {
