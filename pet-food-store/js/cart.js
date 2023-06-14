@@ -44,7 +44,7 @@ window.onload = function() {
                 tr[i].className = 'on';
                 seleted += parseInt(tr[i].getElementsByTagName('input')[1].value);
                 price += parseFloat(tr[i].cells[4].innerHTML);
-                HTMLstr += '<div><img src="' + tr[i].getElementsByTagName('img')[0].src + '"><span class="del" index="' + i + '">取消选择</span></div>'
+                HTMLstr += '<div><img src="' + tr[i].getElementsByTagName('img')[0].src + '"><span class="del" index="' + i + '"></span></div>'
             } else {
                 tr[i].className = '';
             }
