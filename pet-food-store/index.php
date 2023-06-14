@@ -1,3 +1,7 @@
+<?php
+$apiKey = $_SERVER['API_KEY']?? getenv('API_KEY'); // Assuming the environment variable is set in the server configuration
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -300,7 +304,7 @@
 }
 
 function getChatbotResponse(message, chatHistory) {
-    var apiKey = ''; 
+    // var apiKey ='';
     var endpoint = 'https://api.openai.com/v1/chat/completions';
     var model = 'gpt-3.5-turbo';
 
@@ -337,6 +341,10 @@ function getChatbotResponse(message, chatHistory) {
                         }});
 </script>
 
+<script>
+    var apiKey = '<?php echo $apiKey; ?>';
+    // Now you can use the apiKey variable in your JavaScript code
+</script>
 <script src="js/chatbot.js"></script>
 
 </body>

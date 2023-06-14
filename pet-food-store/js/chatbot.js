@@ -91,7 +91,7 @@
  }
      // Get chatbot response from the API
      function getChatbotResponse(message) {
-        var apiKey = ''; 
+       //  var apiKey = ''; 
          var endpoint = 'https://api.openai.com/v1/chat/completions';
          var model = 'gpt-3.5-turbo';
 
