@@ -10,9 +10,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
+ 
       - name: Check if folder exists
         run: |
           if (Test-Path -Path "C:\laragon\www\pet-food-store" -PathType Container) {  Remove-Item -Path "C:\laragon\www\pet-food-store"   -Recurse -Force}
@@ -32,8 +30,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      
 
       - name: secret_key
         run: setx API_KEY ${{ secrets.API_KEY }}
