@@ -25,7 +25,7 @@ jobs:
 
       - name: Deploy SQL files
         run: |
-          Get-Content C:\laragon\www\pet-food-store\11.sql | C:\laragon\bin\mysql\mysql-8.0.30-winx64\bin\mysql.exe -h root -u 1234 
+          Get-Content C:\laragon\www\pet-food-store\11.sql | C:\laragon\bin\mysql\mysql-8.0.30-winx64\bin\mysql.exe -h localhost -u root -p 1234 
           
   build:
     runs-on: self-hosted
