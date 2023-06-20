@@ -13,27 +13,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Check if folder exists
-        run: |
-          if (Test-Path -Path "C:\laragon\www\pet-food-store" -PathType Container) {  Remove-Item -Path "C:\laragon\www\pet-food-store"   -Recurse -Force}
+      
 
-          
-      - name: Deploy to Local 
+
+      - name: Deploy to Local
         run: cp -r pet-food-store C:\laragon\www\
-        
-       
-       
-
-      - name: Deploy SQL files
-        run: |
-          Get-Content C:\laragon\www\pet-food-store\11.sql | C:\laragon\bin\mysql\mysql-8.0.30-winx64\bin\mysql.exe -h localhost -u root 
-          
-  build:
-    runs-on: self-hosted
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: secret_key
-        run: setx API_KEY ${{ secrets.API_KEY }}
