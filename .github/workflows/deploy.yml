@@ -16,7 +16,6 @@ jobs:
       - name: Check if folder exists
         run: |
           if (Test-Path -Path "C:\laragon\www\pet-food-store" -PathType Container) {  Remove-Item -Path "C:\laragon\www\pet-food-store"   -Recurse -Force}
-
           
       - name: Deploy to Local 
         run: cp -r pet-food-store C:\laragon\www\
