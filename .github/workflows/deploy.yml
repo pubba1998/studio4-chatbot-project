@@ -10,11 +10,6 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      
-
 
       - name: Deploy to Local
         run: cp -r pet-food-store C:\laragon\www\
