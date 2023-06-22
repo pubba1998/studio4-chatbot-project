@@ -26,4 +26,6 @@
 07/06/2023
    1. Created the workflow feature branch based on release branch.
    2. Updated the .yml file trying to automatically deploy project.
-
+13/06/2023
+   1. Creating secret api_kei in github.(The environment variable got the value from github), following the team member's document.
+   2. Combined the workflow code from team members to automatically deploy our project successful.
