@@ -71,7 +71,7 @@
     </div>
 </section>
 
-<button id="toggle-chat">Chat Now</button>
+<button id="toggle-chat">Chat Now1</button>
 
  <div class="chat-window" id="chat-window">
         <div class="chat-header">chat window</div>
