@@ -96,11 +96,6 @@ $apiKey = $_SERVER['API_KEY']?? getenv('API_KEY'); // Assuming the environment v
     </div>
        
        
-
-<script>
-    var apiKey = '<?php echo $apiKey; ?>';
-    // Now you can use the apiKey variable in your JavaScript code
-</script>
 <script src="js/chatbot.js"></script>
 
 </body>

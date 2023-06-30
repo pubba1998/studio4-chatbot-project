@@ -1,7 +1,8 @@
 var chatWindow = document.querySelector('.chat-window');
 var isDragging = false, isResizing = false;
 var lastX, lastY, startX, startY;
-
+var apiKey = '<?php echo $apiKey; ?>';
+    // Now you can use the apiKey variable in your JavaScript code
 chatWindow.addEventListener('mousedown', function (e) {
     if (e.target.classList.contains('chat-header')) {
         isDragging = true;
