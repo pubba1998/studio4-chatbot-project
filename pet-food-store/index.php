@@ -90,7 +90,7 @@ $apiKey = $_SERVER['API_KEY']?? getenv('API_KEY'); // Assuming the environment v
          
         </div>
         <div class="chat-footer">
-            <input type="text" placeholder="Enter information....">
+            <input type="text" placeholder="type........">
             <button id="send-btn">send </button>
         </div>
     </div>
